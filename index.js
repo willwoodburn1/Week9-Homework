@@ -35,7 +35,29 @@ const questions = inquirer
             type: "input",
             message: "Please provide details as to the test instructions of your application",
             name: "test"
+        },
+        {
+            type: "list",
+            message: "Please choose a license type for your application",
+            name: "license",
+            choices: [
+                "Apache License 2.0",
+                "Boost Software License 1.0",
+                "BSD 3-Clause License",
+                "Eclipse Public License 1.0"
+            ]
+        },
+        {
+            type: "input",
+            message: "Please state your GitHub username",
+            name: "gitHub"
+        },
+        {
+            type: "input",
+            message: "Please provide your email address",
+            name: "email"
         }
+
 
     ]).then(function (data) {
 
